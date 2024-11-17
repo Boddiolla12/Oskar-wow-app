@@ -14,5 +14,5 @@ app.get("/", (req, res) => {
 const PORT = process.env.Port || 3000;
 
 app.listen(PORT, () => {
-    console.log(`Servr kjører på: http://localhost:${PORT}`)
+    console.log(`Server kjører på: http://localhost:${PORT}`)
 })
