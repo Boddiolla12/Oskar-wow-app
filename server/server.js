@@ -14,7 +14,11 @@ app.get("/", (req, res) => {
 app.use("/api", classRoutes);
 
 
-const PORT = process.env.Port || 3000;
+const PORT = process.env.DB_PORT || 3000;
+
+if (!process.env.PORT) {
+    console.warn("Environment variable PORT is not set. Falling back to default port 3000.");
+}
 
 app.listen(PORT, () => {
     console.log(`Server kjører på: http://localhost:${PORT}`)
